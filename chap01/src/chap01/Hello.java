@@ -1,30 +1,23 @@
 package chap01;
 
-class Person {
-	String name;
-	int age;
-
-	public Person setName(String name) {
-		this.name = name;
-		return this;
-	}
-
-	public Person setAge(int age) {
-		this.age = age;
-		return this;
-	}
-
-	public void sayHello() {
-		System.out.println("Hello. My name is " + name + " and age is " + age + ".");
-	}
-}
+import java.util.Scanner;
 
 public class Hello {
 
 	public static void main(String[] args) {
-		Person person = new Person();
+		Scanner in = new Scanner(System.in);
 
-		person.setName("Moon").setAge(25).sayHello();
+		int scores[] = new int[5];
+		int sum = 0;
+
+		for (int i = 0; i < scores.length; i++) {
+			scores[i] = in.nextInt();
+		}
+
+		for (int i = 0; i < scores.length; i++) {
+			sum += scores[i];
+		}
+		System.out.println(sum / 5.0);
 	}
 
 }
