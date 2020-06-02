@@ -1,23 +1,31 @@
 package chap01;
 
-import java.util.Scanner;
+class Circle {
+	private double radius;
+
+	public Circle(double radius) {
+		this.radius = radius;
+	}
+
+	public double getRadius() {
+		return radius;
+	}
+
+	double findArea() {
+		return 3.14 * radius * radius;
+	}
+}
 
 public class Hello {
 
 	public static void main(String[] args) {
-		Scanner in = new Scanner(System.in);
+		Circle[] circles = new Circle[5];
 
-		int scores[] = new int[5];
-		int sum = 0;
-
-		for (int i = 0; i < scores.length; i++) {
-			scores[i] = in.nextInt();
+		for (int i = 0; i < circles.length; i++) {
+			circles[i] = new Circle(i + 1.0);
+			System.out.printf("width of circle(half line : %.1f) = %.2f\n", circles[i].getRadius(),
+					circles[i].findArea());
 		}
-
-		for (int i = 0; i < scores.length; i++) {
-			sum += scores[i];
-		}
-		System.out.println(sum / 5.0);
 	}
 
 }
