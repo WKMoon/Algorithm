@@ -62,8 +62,8 @@ public class Launcher {
 				y = input.charAt(1) - '0';
 
 				if (x == 0 && y == 0) {
-					System.out.println("Cannot use 0,0");
-					continue;
+					System.out.println("Bye Bye");
+					break;
 				} // end if
 			} // end if
 
