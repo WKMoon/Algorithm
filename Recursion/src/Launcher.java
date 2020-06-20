@@ -76,7 +76,7 @@ public class Launcher {
 
 			for (int i = 0; i < SIZE; i++) {
 				System.out.println(board[i]);
-			}
+			} // end for
 		} // end while
 
 	}// end void
