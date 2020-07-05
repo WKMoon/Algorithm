@@ -5,49 +5,56 @@ import java.util.Scanner;
 public class Launcher {
 
 	public static void main(String[] args) {
-		final int SIZE = 10;
-		int x = 0;
-		int y = 0;
-
-		char[][] board = new char[SIZE][SIZE];
-
-		byte[][] shipBoard = { { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 1, 1, 1, 0, 0, 0, 0, 0 },
-				{ 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 1, 1, 1, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-				{ 0, 0, 0, 0, 0, 0, 0, 1, 0 }, { 1, 1, 1, 0, 0, 0, 0, 1, 0 }, { 0, 0, 0, 0, 0, 0, 0, 1, 0 },
-				{ 0, 0, 0, 0, 0, 0, 0, 0, 0 } };// end byteArr
-
-		for (int i = 1; i < SIZE; i++) {
-			board[0][i] = board[i][0] = (char) ('0' + i);
-		}
+		final int SIZE = 5;
+		int num = 0;
+		int[][] bingo = new int[SIZE][SIZE];
 
 		Scanner sc = new Scanner(System.in);
 
-		while (true) {
-			System.out.println("Enter point where u want to attack. (00 for exit)");
+		for (int i = 0; i < SIZE; i++) {
+			for (int j = 0; j < SIZE; j++) {
+				bingo[i][j] = i * SIZE + j + 1;
+			} // end for
+		} // end for
 
-			String input = sc.nextLine();
+		for (int i = 0; i < SIZE; i++) {
+			for (int j = 0; j < SIZE; j++) {
+				int x = (int) (Math.random() * SIZE);
+				int y = (int) (Math.random() * SIZE);
 
-			if (input.length() == 2) {
-				x = Integer.parseInt(String.valueOf(input.charAt(0)));
-				y = Integer.parseInt(String.valueOf(input.charAt(1)));
+				int tmp = bingo[x][y];
+				bingo[x][y] = bingo[i][j];
+				bingo[i][j] = tmp;
+			}
+		}
 
-				if (x == 0 && y == 0) {
-					break;
-				}
-			} // end if
-
-			if (input.length() > 2 || x <= 0 || x >= SIZE || y <= 0 || y >= SIZE) {
-				System.out.println("Wrong input. Type again");
-				continue;
-			} // end if
-
-			board[x][y] = shipBoard[x - 1][y - 1] == 1 ? 'O' : 'X';
+		do {
 
 			for (int i = 0; i < SIZE; i++) {
-				System.out.println(board[i]);
-			}
+				for (int j = 0; j < SIZE; j++) {
+					System.out.printf("%2d ", bingo[i][j]);
+				}
+				System.out.println();
+			} // end for
 			System.out.println();
-		} // end while
+
+			System.out.println("Enter number between 1 to 25. 0 for Exit");
+
+			String tmp = sc.nextLine();
+			num = Integer.parseInt(tmp);
+
+			outer: for (int i = 0; i < SIZE; i++) {
+				for (int j = 0; j < SIZE; j++) {
+					if (bingo[i][j] == num) {
+						bingo[i][j] = 0;
+						break outer;
+					}
+				}
+			}
+
+		} while (num != 0);
+
+		sc.close();
 
 	}
 
