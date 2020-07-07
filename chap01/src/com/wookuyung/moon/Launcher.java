@@ -1,61 +1,81 @@
 package com.wookuyung.moon;
 
-import java.util.Scanner;
-
 public class Launcher {
 
 	public static void main(String[] args) {
-		final int SIZE = 5;
-		int num = 0;
-		int[][] bingo = new int[SIZE][SIZE];
 
-		Scanner sc = new Scanner(System.in);
+		Deck d = new Deck();
+		Card c = d.pick(0);
+		System.out.println(c);
 
-		for (int i = 0; i < SIZE; i++) {
-			for (int j = 0; j < SIZE; j++) {
-				bingo[i][j] = i * SIZE + j + 1;
-			} // end for
-		} // end for
+		d.shuffle();
+		c = d.pick(0);
+		System.out.println(c);
+	}
 
-		for (int i = 0; i < SIZE; i++) {
-			for (int j = 0; j < SIZE; j++) {
-				int x = (int) (Math.random() * SIZE);
-				int y = (int) (Math.random() * SIZE);
+}
 
-				int tmp = bingo[x][y];
-				bingo[x][y] = bingo[i][j];
-				bingo[i][j] = tmp;
+class Deck {
+	final int CARD_NUM = 52;
+
+	Card cardArr[] = new Card[CARD_NUM];
+
+	Deck() {
+		int i = 0;
+
+		for (int k = Card.KIND_MAX; k > 0; k--) {
+			for (int n = 0; n < Card.NUM_MAX; n++) {
+				cardArr[i++] = new Card(k, n + 1);
 			}
 		}
+	}
 
-		do {
+	Card pick(int idx) {
+		return cardArr[idx];
+	}
 
-			for (int i = 0; i < SIZE; i++) {
-				for (int j = 0; j < SIZE; j++) {
-					System.out.printf("%2d ", bingo[i][j]);
-				}
-				System.out.println();
-			} // end for
-			System.out.println();
+//	Card pick() {
+//		int index = (int) (Math.random() * CARD_NUM);
+//		return pick(index);
+//	}
 
-			System.out.println("Enter number between 1 to 25. 0 for Exit");
+	void shuffle() {
+		for (int i = 0; i < CARD_NUM; i++) {
+			int r = (int) (Math.random() * CARD_NUM);
 
-			String tmp = sc.nextLine();
-			num = Integer.parseInt(tmp);
+			Card tmp = cardArr[i];
+			cardArr[i] = cardArr[r];
+			cardArr[r] = tmp;
 
-			outer: for (int i = 0; i < SIZE; i++) {
-				for (int j = 0; j < SIZE; j++) {
-					if (bingo[i][j] == num) {
-						bingo[i][j] = 0;
-						break outer;
-					}
-				}
-			}
+		}
+	}
+}
 
-		} while (num != 0);
+class Card {
+	int kind;
+	int number;
 
-		sc.close();
+	static final int KIND_MAX = 4;
+	static final int NUM_MAX = 13;
 
+	static final int SPADE = 4;
+	static final int DIAMOND = 3;
+	static final int HEART = 2;
+	static final int CLOVER = 1;
+
+	Card() {
+		this(SPADE, 1);
+	}
+
+	Card(int kind, int number) {
+		this.kind = kind;
+		this.number = number;
+	}
+
+	public String toString() {
+		String[] kinds = { "", "CLOVER", "HEART", "DIAMOND", "SPADE" };
+		String numbers = "0123456789XJQK";
+		return "kind: " + kinds[this.kind] + ", number: " + numbers.charAt(this.number);
 	}
 
 }
