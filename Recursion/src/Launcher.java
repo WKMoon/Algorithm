@@ -23,8 +23,8 @@ public class Launcher {
 		int result = 0;
 
 		for (int i = 0; i < numArr.length - 2; i++) {
-			for (int j = i + 1; j < numArr.length - 1; j++) {
-				for (int k = j + 1; k < numArr.length; k++) {
+			for (int j = i + 1; j < numArr.length - 1; j++) {//add integer 1 for avoiding duplication.
+				for (int k = j + 1; k < numArr.length; k++) {//add integer 1 for avoiding duplication.
 					sum = numArr[i] + numArr[j] + numArr[k];
 					if (sum <= numberOfLimit && sum > result) {
 						result = sum;
