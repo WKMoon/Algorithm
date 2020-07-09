@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-//BalckJack
+//BlackJack
 public class Launcher {
 
 	public static void main(String[] args) {
