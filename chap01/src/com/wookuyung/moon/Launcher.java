@@ -1,81 +1,121 @@
 package com.wookuyung.moon;
 
+import java.util.Vector;
+
 public class Launcher {
 
 	public static void main(String[] args) {
 
-		Deck d = new Deck();
-		Card c = d.pick(0);
-		System.out.println(c);
+		Buyer b = new Buyer();
+		Tv tv = new Tv();
+		Com com = new Com();
+		Audio aud = new Audio();
 
-		d.shuffle();
-		c = d.pick(0);
-		System.out.println(c);
+		b.buy(tv);
+		b.buy(com);
+		b.buy(aud);
+		b.summary();
+		b.refund(com);
+		b.summary();
 	}
 
-}
+}// end Launcher
 
-class Deck {
-	final int CARD_NUM = 52;
+class Product {
+	int price;
+	int bonusPoint;
 
-	Card cardArr[] = new Card[CARD_NUM];
-
-	Deck() {
-		int i = 0;
-
-		for (int k = Card.KIND_MAX; k > 0; k--) {
-			for (int n = 0; n < Card.NUM_MAX; n++) {
-				cardArr[i++] = new Card(k, n + 1);
-			}
-		}
+	Product(int price) {
+		this.price = price;
+		bonusPoint = (int) (price / 10.0);
 	}
 
-	Card pick(int idx) {
-		return cardArr[idx];
+	Product() {
+		this.price = 0;
+		this.bonusPoint = 0;
 	}
+}// end Product
 
-//	Card pick() {
-//		int index = (int) (Math.random() * CARD_NUM);
-//		return pick(index);
-//	}
+class Tv extends Product {
 
-	void shuffle() {
-		for (int i = 0; i < CARD_NUM; i++) {
-			int r = (int) (Math.random() * CARD_NUM);
-
-			Card tmp = cardArr[i];
-			cardArr[i] = cardArr[r];
-			cardArr[r] = tmp;
-
-		}
-	}
-}
-
-class Card {
-	int kind;
-	int number;
-
-	static final int KIND_MAX = 4;
-	static final int NUM_MAX = 13;
-
-	static final int SPADE = 4;
-	static final int DIAMOND = 3;
-	static final int HEART = 2;
-	static final int CLOVER = 1;
-
-	Card() {
-		this(SPADE, 1);
-	}
-
-	Card(int kind, int number) {
-		this.kind = kind;
-		this.number = number;
+	Tv() {
+		super(100);
 	}
 
 	public String toString() {
-		String[] kinds = { "", "CLOVER", "HEART", "DIAMOND", "SPADE" };
-		String numbers = "0123456789XJQK";
-		return "kind: " + kinds[this.kind] + ", number: " + numbers.charAt(this.number);
+		return "Tv";
+	}
+}// end Tv
+
+class Com extends Product {
+
+	Com() {
+		super(200);
 	}
 
-}
+	public String toString() {
+		return "Com";
+	}
+}// end Com
+
+class Audio extends Product {
+
+	Audio() {
+		super(50);
+	}
+
+	public String toString() {
+		return "Audio";
+	}
+}// end Audio
+
+class Buyer {
+	int money = 1000;
+	int bonusPoint = 0;
+	Vector item = new Vector();
+
+	void buy(Product p) {
+		if (money < p.price) {
+			System.out.println("Price is higher than your budget.");
+			return;
+		}
+
+		money -= p.price;
+		bonusPoint += p.bonusPoint;
+
+		item.add(p);
+		System.out.println("You're about to bought " + p);
+
+	}// end buy
+
+	void refund(Product p) {
+		if (item.remove(p)) {
+			money += p.price;
+			bonusPoint += p.bonusPoint;
+			System.out.println("You're about to refunded " + p);
+		} else {
+			System.out.println("You don't have " + p + " in your receipt");
+		}
+	}// end refund
+
+	void summary() {
+		int sum = 0;
+		String list = "";
+
+		if (item.isEmpty()) {
+			System.out.println("You don't any in your cart.");
+			return;
+		} // end if
+
+		for (int i = 0; i < item.size(); i++) {
+			Product p = (Product) item.get(i);
+			sum += p.price;
+			list += i == 0 ? "" + p : ", " + p;
+		} // end for
+
+		System.out.println("You're total price is " + sum);
+		System.out.println("You bought " + list + ".");
+
+	}// end summary
+
+}// end buyer
