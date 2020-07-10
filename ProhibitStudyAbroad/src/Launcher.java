@@ -9,19 +9,16 @@ public class Launcher {
 		final String CAMBRIDGE = "CAMBRIDGE";
 
 		System.out.println("Enter word.");
-		String word = sc.nextLine();
+		String word = sc.nextLine().toUpperCase();
 
 		StringBuilder wordSB = new StringBuilder(word);
 		StringBuilder camSB = new StringBuilder(CAMBRIDGE);
 
-		System.out.println(wordSB.length());
-		System.out.println(camSB.length());
 		for (int i = 0; i < wordSB.length(); i++) {
 			for (int j = 0; j < camSB.length(); j++) {
 				if (wordSB.charAt(i) == camSB.charAt(j)) {
-					System.out.println(wordSB.charAt(i));
-					System.out.println(camSB.charAt(j));
 					wordSB.deleteCharAt(i);
+					--i;// reduce 1 length after deleting a duplicated letter
 				} // end if
 			} // end second for
 		} // end for
