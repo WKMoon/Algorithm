@@ -40,12 +40,12 @@ public class Launcher {
         if(!forward.isEmpty()){
             forward.clear();
         }
-    }//
+    }
 
     public static void goForward(){
         if(!forward.isEmpty())
             back.push(forward.pop());
-    }//
+    }
 
     public static void goBack(){
         if(!back.isEmpty())
