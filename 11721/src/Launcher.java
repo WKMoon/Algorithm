@@ -19,4 +19,4 @@ public class Launcher {
             System.out.println(str.substring(pack *10));
         }//end if
     }//end main
-}
+}//end class
