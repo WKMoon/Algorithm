@@ -9,10 +9,9 @@ public class Launcher {
         char space = ' ';
 
         for(int i = 0; i < numStar; i++){
-            for(int k = numStar-i-1; k > 0; k--){
+            for(int k = numStar-1-i; k > 0; k--){
                 System.out.print(space);
-             }//end for
-
+            }//end for
             for(int j = 0; j < i*2+1; j++){
                 System.out.print(star);
             }//end for
