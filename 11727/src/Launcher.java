@@ -18,7 +18,7 @@ public class Launcher {
             numArr[i] = numArr[i-1] + (numArr[i-2] * 2);
         }//end for
 
-        System.out.println(numArr[n]%10007);
+        System.out.println(numArr[n]%10007);//remain by 10007
 
     }
 }
