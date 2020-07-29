@@ -11,7 +11,7 @@ public class Launcher {
             System.exit(0);
         }//end if
 
-        if(num == 1 || num == 2){
+        if(num == 2){
             System.out.println(1);
             System.exit(0);
         }
@@ -22,10 +22,10 @@ public class Launcher {
 
         for(int i = 4; i <= num; i++){
             if(i%3 == 0){
-                dpArr[i] = Math.min(dpArr[i/3], dpArr[i-1]) + 1;
+                dpArr[i] = Math.min(dpArr[i/3], dpArr[i-1]) + 1;//Count 1 more
             }//end if
             else if(i%2 == 0){
-                dpArr[i] = Math.min(dpArr[i/2], dpArr[i-1]) + 1;
+                dpArr[i] = Math.min(dpArr[i/2], dpArr[i-1]) + 1;//Count 1 more
             }//end if
             else{
                 dpArr[i] = dpArr[i-1] + 1;
