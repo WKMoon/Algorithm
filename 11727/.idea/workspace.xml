@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Algorithm" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Java-Basic" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5d65e7d9-517b-4d20-aeb0-4038f9f9fb4f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/Java-Basic.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10818/10818.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10991/10991.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../11721/11721.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../11726/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../11726/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../11726/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../11726/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../11726/11726.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11727.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Launcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1463/1463.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1924/1924.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2438/2438.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2439/2439.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2440/2440.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2441/2441.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2442/2442.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2445/2445.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2522/2522.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2739/2739.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2741/2741.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2742/2742.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../8393/8393.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Queue(UnixHistory)/Queue(UnixHistory).iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Stack(BackForward)/Stack(BackForward).iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Stack(ExpValidation)/Stack(ExpValidation).iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Test/Test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../assignment/assignment.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../assignment2/assignment2.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1fL9nHfurXAL3w9UEH49htPNBXs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Launcher" />
+      <module name="11727" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Launcher" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5d65e7d9-517b-4d20-aeb0-4038f9f9fb4f" name="Default Changelist" comment="" />
+      <created>1595986670911</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595986670911</updated>
+      <workItem from="1595986673787" duration="1244000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="754" height="219" key="GridCell.Tab.0.bottom" timestamp="1595987907868">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="754" height="219" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1595987907868" />
+    <state width="754" height="219" key="GridCell.Tab.0.center" timestamp="1595987907868">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="754" height="219" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1595987907868" />
+    <state width="754" height="219" key="GridCell.Tab.0.left" timestamp="1595987907867">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="754" height="219" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1595987907867" />
+    <state width="754" height="219" key="GridCell.Tab.0.right" timestamp="1595987907868">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="754" height="219" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1595987907868" />
+  </component>
+</project>
