@@ -26,7 +26,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5d65e7d9-517b-4d20-aeb0-4038f9f9fb4f" name="Default Changelist" comment="Done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Launcher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +79,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595986670911</updated>
-      <workItem from="1595986673787" duration="1288000" />
+      <workItem from="1595986673787" duration="1396000" />
     </task>
     <task id="LOCAL-00001" summary="Done">
       <created>1595987942395</created>
@@ -89,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595987942395</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Done">
+      <created>1595987973592</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1595987973592</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,25 +117,29 @@
     <option name="LAST_COMMIT_MESSAGE" value="Done" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="754" height="219" key="GridCell.Tab.0.bottom" timestamp="1595987921129">
+    <state width="754" height="219" key="GridCell.Tab.0.bottom" timestamp="1595988070376">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="754" height="219" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1595987921129" />
-    <state width="754" height="219" key="GridCell.Tab.0.center" timestamp="1595987921129">
+    <state width="754" height="219" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1595988070376" />
+    <state width="754" height="219" key="GridCell.Tab.0.center" timestamp="1595988070375">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="754" height="219" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1595987921129" />
-    <state width="754" height="219" key="GridCell.Tab.0.left" timestamp="1595987921129">
+    <state width="754" height="219" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1595988070375" />
+    <state width="754" height="219" key="GridCell.Tab.0.left" timestamp="1595988070375">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="754" height="219" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1595987921129" />
-    <state width="754" height="219" key="GridCell.Tab.0.right" timestamp="1595987921129">
+    <state width="754" height="219" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1595988070375" />
+    <state width="754" height="219" key="GridCell.Tab.0.right" timestamp="1595988070375">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="754" height="219" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1595987921129" />
-    <state x="0" y="162" key="Vcs.Push.Dialog.v2" timestamp="1595987946918">
+    <state width="754" height="219" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1595988070375" />
+    <state x="0" y="162" key="Vcs.Push.Dialog.v2" timestamp="1595987983238">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="0" y="162" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1595987946918" />
+    <state x="0" y="162" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1595987983238" />
+    <state x="0" y="50" key="new project wizard" timestamp="1595988066528">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="0" y="50" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1595988066528" />
   </component>
 </project>
