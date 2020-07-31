@@ -22,7 +22,7 @@ public class Launcher {
         for(int i = 4; i <= n; i++){
             dp[i] = Math.max(arr[i]+dp[i-2], arr[i]+arr[i-1]+dp[i-3]);
             dp[i] = Math.max(dp[i],dp[i-1]);
-        }
+        }//end for
         System.out.println(dp[n]);
 
     }//end void
