@@ -21,7 +21,7 @@ public class Launcher {
             dp[i] = 1; //reset to 1
             for(int j = 0; j < i; j++){
                 if(arr[j] < arr[i]){
-                    int temp = dp[j] + 1; //prior index j + 1;
+                     int temp = dp[j] + 1; //prior index j + 1;
                     dp[i] = Math.max(temp,dp[i]); //
                 }//end if
             }//end for
