@@ -1,29 +1,42 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class Launcher {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 
-        int[] arr = new int[n+1];
-        int[] dp = new int[n+1];
+        int n =  Integer.parseInt(br.readLine());
+        int[] arr = new int[n];
+        int[] dp = new int[n];
 
-        for(int i = 1; i <= n; i++){arr[i] = sc.nextInt();}
-
-        if(n>=1) dp[1] = arr[1];
-        if(n>=2) dp[2] = arr[1] + arr[2];
-        if(n>=3){
-            dp[3] = Math.max(dp[2], arr[2]+arr[3]);//arr[1]+arr[2], arr[2]+arr[3]
-            dp[3] = Math.max(dp[3], arr[1]+arr[3]);//from top line
+        for(int i = 0; i < n; i++){
+            arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        for(int i = 4; i <= n; i++){
-            dp[i] = Math.max(arr[i]+dp[i-2], arr[i]+arr[i-1]+dp[i-3]);
-            dp[i] = Math.max(dp[i],dp[i-1]);
-        }
-        System.out.println(dp[n]);
+        for(int i = 0; i < dp.length; i++){
+            dp[i] = 1;
+            for(int j = 0; j < i; j++){
+                if(arr[i] > arr[j]){
+                    int temp =dp[j] + 1;
+                    dp[i] = Math.max(temp, dp[i]);
+                }//end if
+            }//end for
+        }//end for
+
+        int result = Integer.MIN_VALUE;
+
+        for(int a : dp){
+            result = Math.max(a, result);
+        }//end for
+
+
+
 
     }//end void
 }//end class
