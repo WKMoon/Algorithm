@@ -5,7 +5,8 @@ public class Launcher {
         Scanner sc = new Scanner(System.in);
 
         String strNum = sc.next();
-        int[] dp = new int[strNum.length() + 1];
+
+    int[] dp = new int[strNum.length() + 1];
         dp[0] = dp[1] = 1;
 
         for(int i = 2; i <= strNum.length(); i++){

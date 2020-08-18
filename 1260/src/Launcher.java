@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Launcher {
     static ArrayList<Integer>[] list;
-    static boolean[] check;
+    static boolean[] check; //sign it if I check each node
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -39,7 +39,7 @@ public class Launcher {
 
     private static void dfs(int start){
         if(check[start]){
-            return;
+            return;  //if there's not any false.
         }//end if
         check[start] = true;
         System.out.print(start + " ");

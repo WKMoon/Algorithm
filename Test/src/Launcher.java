@@ -1,43 +1,41 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.Scanner;
-import java.util.StringTokenizer;
 
 public class Launcher {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        int n =  Integer.parseInt(br.readLine());
-        int[] arr = new int[n];
-        int[] dp = new int[n];
+        Student stu = new Student("moon", 80, 20, 10);
+        stu.print();
 
-        for(int i = 0; i < n; i++){
-            arr[i] = Integer.parseInt(st.nextToken());
-        }
-
-        for(int i = 0; i < dp.length; i++){
-            dp[i] = 1;
-            for(int j = 0; j < i; j++){
-                if(arr[i] > arr[j]){
-                    int temp =dp[j] + 1;
-                    dp[i] = Math.max(temp, dp[i]);
-                }//end if
-            }//end for
-        }//end for
-
-        int result = Integer.MIN_VALUE;
-
-        for(int a : dp){
-            result = Math.max(a, result);
-        }//end for
+        System.out.println();
+        Student stu1 = new Student("moon1");
+        stu1.print();
 
 
-
-
-    }//end void
-}//end class
-
+//        System.out.println("몇명의 학생을 등록할까요?");
+//        int memCnt = sc.nextInt();
+//        Student[] student = new Student[memCnt];
+//        for(int i=0; i<memCnt; i++){
+//            student[i] = new Student();
+//            System.out.println((i+1) + "번째 학생의 이름을 입력하세요.");
+//            String name = sc.next();
+//            student[i].setName(name);
+//
+//            System.out.println((i+1) + "번째 학생의 국어점수를 입력하세요.");
+//            int kor = sc.nextInt();
+//            student[i].setKor(kor);
+//
+//            System.out.println((i+1) + "번째 학생의 수학점수를 입력하세요.");
+//            int math = sc.nextInt();
+//            student[i].setMath(math);
+//
+//            System.out.println((i+1) + "번째 학생의 영어점수를 입력하세요.");
+//            int eng = sc.nextInt();
+//            student[i].setEng(eng);
+//        }
+//
+//        for(Student std : student){
+//            std.print();
+//        }
+    }
+}
