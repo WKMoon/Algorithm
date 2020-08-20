@@ -19,7 +19,7 @@ public class Launcher {
             map = new int[n][n];
             visit = new boolean[n];
             cnt = 0;
-            line = in.readLine().split(" ");
+            line = in.readLine().split(" ");//Number arr
             for(int i = 0; i < n; i++){
                 map[i][Integer.parseInt(line[i])-1] = 1;
             }//end for
