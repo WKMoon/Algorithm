@@ -13,8 +13,8 @@ public class Launcher {
         ArrayList list = new ArrayList();
 
             while(true){
-                w = sc.nextInt();
-                h = sc.nextInt();
+                w = sc.nextInt();//col
+                h = sc.nextInt();//row
 
                 if(w == 0 && h == 0){
                     System.out.println(list);
